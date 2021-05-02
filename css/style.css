@@ -34,7 +34,7 @@ nav ul li a {
     margin-top: 20px;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 }
 
 #firsth2 h2{
@@ -58,4 +58,8 @@ main p{
 footer { 
 text-align: center;
 background-color:  #B5EAD7;
+}
+
+#sales1 section{
+    display: inline;
 }

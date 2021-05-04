@@ -51,13 +51,34 @@ position: relative;
   
 }
 
-#sh2{
+.sh2{
+    font-size: 40px;
+    position: relative;
+    bottom: 180px;
+    text-align: center;
+    font-family: cursive;
+    background-color: #E09BC3;
+    padding: 50px;
+}
+
+#sh3{
+    font-size: 40px;
+    position: relative;
+    top: 80px;
+    text-align: center;
+    font-family: cursive;
+    background-color: #E0D26E;
+    padding: 40px;
+}
+
+#sh4{
     font-size: 40px;
     position: relative;
     bottom: 180px;
     text-align: center;
     font-family: cursive;
 }
+
 
 main p{
     font-size: 25px;
@@ -72,25 +93,37 @@ bottom: 160px;
     position: relative;
     text-align: center;
     font-family: cursive;
-    top: 10px;
+    top: 150px;
+    background-color: #E730F0;
 
 }
 
-footer { 
+.last { 
 text-align: center;
 background-color:  #B5EAD7;
+position: relative;
+top: 300px;
 }
-
-#sales1 section{
-    display: inline;
-
-}
-
 
 #ourstory{
 
     position: relative;
     top: 200px;
+}
+
+#salesh2{
+    text-align: center;
+    position: relative;
+    left: 300px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: cursive;
+    top: 20px;
+}
+
+#salescity{
+    position: relative;
+    top: 10px;
 }
 
  

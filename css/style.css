@@ -4,56 +4,76 @@
 }
 
 header {
-    background-color:#FF9AA2;
+    background-color:#80F0D4;
 }
 
 h1{
 font-weight: bold;
-float: left;
-font-size: 60px;
+font-size: 80px;
+font-family: cursive;
+position: relative;
+left: 25px;
+top: 5px;
 }
 
 header nav {
     padding-top: 30px;
+    
 }
 nav ul li  {
-    padding: 40px;
-    display: inline; 
+    padding: 8px;
+    display: inline;
+    float: right;
+    
 }
 
 nav ul li a {
     text-decoration: none;
-    color:#70560f;
+    color:#A38E4E;
     text-transform: uppercase;
     font-size: 30px;
-    margin-left: 120px;
-}
-#firsth2 {
-    color:#94a3df;
-    background-image: url("../img/salmon.png");
-    height: 400px;
-    margin-top: 20px;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    margin: 40px;
+    bottom: 70px;
+    position: relative;
+    font-family: cursive;
+    right: 10px;
+    will-change: auto;
 }
 
-#firsth2 h2{
-    font-size: 40px;
+#fh2{
     text-align: center;
-    line-height: 1px;
+    font-family: cursive;
+    color: #94a3df;
+    height: 23px;
+position: relative;
+    font-size: 40px;
+    left: 300px;
+  
 }
 
-#secdh2{
+#sh2{
     font-size: 40px;
+    position: relative;
+    bottom: 180px;
     text-align: center;
-    line-height: 60px;
+    font-family: cursive;
 }
 
 main p{
-    font-size: 20px;
+    font-size: 25px;
     text-align: justify;
     line-height: 1.5;
+    position: relative;
+bottom: 160px;
+}
+
+#th2{
+    font-size: 40px;
+    position: relative;
+    text-align: center;
+    font-family: cursive;
+    top: 10px;
+
 }
 
 footer { 
@@ -65,3 +85,12 @@ background-color:  #B5EAD7;
     display: inline;
 
 }
+
+
+#ourstory{
+
+    position: relative;
+    top: 200px;
+}
+
+ 

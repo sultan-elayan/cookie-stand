@@ -2,55 +2,141 @@
 
 //1
 
-// let hours = ['6AM' , '7AM' , '8AM' , '9AM' , '10AM' , '11AM' , '12AM' , '1PM' , '2PM' , '3PM' , '4PM' , '5PM' , '5PM' , '6PM' , '7PM']
-//  let avaregCookiesForCustomerPerHour = [];
-// let Seattle = {
-//     name: 'Seattle',
-//     maxHourlyCustomers: 65,
-//     minHourlyCustomers: 23,
-//     averageCookiesPerCustomer: 6.3,
-//     getCookies: function () {
-//         for (let i = 0; i < hours.length; i++) {
-//             avaregCookiesForCustomerPerHour.push(Math.ceil(getRandom(this.minHourlyCustomers, this.maxHourlyCustomers) * this.averageCookiesPerCustomer));
-//         }
-//     },
-//     render : function () {
-//         let list1 = document.getElementById('seatle');
-//         let pharaghrap =document.createElement('p');
-//         pharaghrap.textContent=this.name; 
-//         list1.appendChild(pharaghrap);
-//         let ulElement = document.createElement('ul');
-//         list1.appendChild(ulElement);
-//         for (let i =0 ;  i< hours.length; i++) {
-//             let liElement = document.createElement('li');
-//             ulElement.appendChild(liElement);
-//             for (let j=0 ; j<avaregCookiesForCustomerPerHour.length; j++){
-//             }
-//            liElement.textContent = `${hours[i]}:${avaregCookiesForCustomerPerHour[i]} cookes`
-//         }
-//     }
-// }
-// Seattle.getCookies();
-// Seattle.render(); 
-// function getRandom(min, max) {
-//     return Math.ceil(Math.random() * (max - min + 1) + min);
-// }
 
-/
+//here we add the hours
+let hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12AM', '1PM', '2PM', '3PM', '4PM', '5PM', '5PM', '6PM', '7PM']
+
+// random function to calculate random numbers to use in the arry
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 
-function Branch(name, minHourlyCustomers, maxHourlyCustomers,averageCookiesPerCustomer,) {
+// create object
+let Seattle = {
+    name: 'Seattle',
+    maxHourlyCustomers: 65,
+    minHourlyCustomers: 23,
+    avgCookiesPerCustomer: 6.3,
+    CustomerPerHour:[],
+    CookiesPerHour:[],
+    total: 0,
     
+    // Customer Per Hour function by for loop
+    getCustomerPerHour: function () {
+        for (let i = 0; i < hours.length; i++) {
+            this.CustomerPerHour.push(random(this.minHourlyCustomers, this.maxHourlyCustomers));      
+          }
 
-    this.name = name;
-    this.minHourlyCustomers = minHourlyCustomers;
-    this.maxHourlyCustomers = maxHourlyCustomers;
-    this.averageCookiesPerCustomer = averageCookiesPerCustomer;
-  let theParent = document.getElementById('sales1');
+    },
 
-    function getRandom(min, max) {
-            return Math.floor(Math.random() * (max - min + 1) + min);
+    // cookies Per Hour function by for loop
+    getCookiesPerHour: function() {
+        for (let i = 0; i < hours.length; i++) {
+            this.CookiesPerHour.push(Math.floor(this.CustomerPerHour[i] * this.avgCookiesPerCustomer));
+            this.total += this.CookiesPerHour[i];        
         }
+
+    },
+
+    // the connction between html and JS
+    render: function () {
+        let list1 = document.getElementById('seatle');
+        let pharaghrap = document.createElement('p');
+        pharaghrap.textContent = this.name;
+        list1.appendChild(pharaghrap);
+        let ulElement = document.createElement('ul');
+        list1.appendChild(ulElement);
+        for (let i = 0; i < hours.length; i++) {
+            let liElement = document.createElement('li');
+            ulElement.appendChild(liElement);
+            liElement.textContent = `${hours[i]}:${this.CookiesPerHour[i]} cookes`
+        }
+     
+        let totalItem = document.createElement('li');
+        ulElement.appendChild(totalItem);
+        totalItem.textContent = `Total: ${this.total} cookies`
+    }
+
+}
+
+// call the functions
+Seattle.getCustomerPerHour();
+Seattle.getCookiesPerHour();
+Seattle.render();
+
+
+
+////////////////////////
+
+
+let Tokyo = {
+    name: 'Tokyo',
+    maxHourlyCustomers: 3,
+    minHourlyCustomers: 24,
+    avgCookiesPerCustomer: 1.2,
+    CustomerPerHour:[],
+    CookiesPerHour:[],
+    total: 0,
+
+    
+    
+    getCustomerPerHour: function () {
+        for (let i = 0; i < hours.length; i++) {
+            this.CustomerPerHour.push(random(this.minHourlyCustomers, this.maxHourlyCustomers));      
+          }
+
+    },
+
+    getCookiesPerHour: function() {
+        for (let i = 0; i < hours.length; i++) {
+            this.CookiesPerHour.push(Math.floor(this.CustomerPerHour[i] * this.avgCookiesPerCustomer));
+            this.total += this.CookiesPerHour[i];        
+        }
+
+    },
+    render: function () {
+        let list1 = document.getElementById('Tokyo');
+        let pharaghrap = document.createElement('p');
+        pharaghrap.textContent = this.name;
+        list1.appendChild(pharaghrap);
+        let ulElement = document.createElement('ul');
+        list1.appendChild(ulElement);
+        for (let i = 0; i < hours.length; i++) {
+            let liElement = document.createElement('li');
+            ulElement.appendChild(liElement);
+            liElement.textContent = `${hours[i]}:${this.CookiesPerHour[i]} cookes`
+        }
+     
+        let totalItem = document.createElement('li');
+        ulElement.appendChild(totalItem);
+        totalItem.textContent = `Total: ${this.total} cookies`
+    }
+
+}
+Tokyo.getCustomerPerHour();
+Tokyo.getCookiesPerHour();
+Tokyo.render();
+
+
+
+///////////////////
+
+
+let Dubai = {
+    name: 'Dubai',
+    maxHourlyCustomers: 11,
+    minHourlyCustomers: 38,
+    avgCookiesPerCustomer: 3.7,
+    CustomerPerHour:[],
+    CookiesPerHour:[],
+    total: 0,
+    
+    
+    getCustomerPerHour: function () {
+        for (let i = 0; i < hours.length; i++) {
+            this.CustomerPerHour.push(random(this.minHourlyCustomers, this.maxHourlyCustomers));      
+          }
 
         Branch.prototype.tableRender = function() {
 
@@ -69,4 +155,4 @@ function Branch(name, minHourlyCustomers, maxHourlyCustomers,averageCookiesPerCu
             for (let index = 0; index < array.length; index++) {
                let 
                 
-            }}}
+            }}}}

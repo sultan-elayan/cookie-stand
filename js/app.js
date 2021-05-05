@@ -70,7 +70,7 @@
 // constructor method 
 
 let Branchs = [];
-let hours = ['6AM', '7AM' , '8AM', '9AM', '10AM', '11AM', '12AM', '1PM', '2PM', '3PM', '4PM', '5PM', '5PM', '6PM', '7PM'];
+let hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12AM', '1PM', '2PM', '3PM', '4PM', '5PM', '5PM', '6PM', '7PM'];
 
 function randomNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -200,7 +200,7 @@ function footer() {
         footRow.appendChild(footthtotal);
         footthtotal.textContent = totlPerHour;
 
-        console.log(totlPerHour);
+        //console.log(totlPerHour);
 
 
     }
@@ -208,3 +208,32 @@ function footer() {
 }
 
 footer();
+
+
+let branchForm = document.getElementById('form');
+branchForm.addEventListener('submit', submitter);
+
+
+function submitter(event) {
+    event.preventDefault();
+
+    let name = event.target.nameField.value;
+    console.log(name);
+
+    let addedBranch = new Branch(name, minHourlyCustomers, maxHourlyCustomers, avgCookiesPerCustomer);
+
+    addedBranch.getcustomerPerHour();
+    addedBranch.getcookiesPerHour();
+    addedBranch.render();
+
+    let container = document.getElementById('BranchProfiles');
+    container.textContent = '';
+    for (let i = 0; i < cats.length; i++) {
+
+        Branchs[i].getcustomerPerHour();
+        Branchs[i].getcookiesPerHour();
+        Branchs[i].avgCookiesPerCustomer();
+
+}
+}
+//submitter();

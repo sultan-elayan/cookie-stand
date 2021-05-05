@@ -135,4 +135,11 @@ top: 300px;
 table , th , td {
     border: 2px solid purple;
 }
+
+#event{
+    position: relative;
+    top: 100px;
+    left: 500px;
+    font-size: 30px;
+}
  

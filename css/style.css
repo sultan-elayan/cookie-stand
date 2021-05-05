@@ -115,10 +115,16 @@ top: 300px;
     text-align: center;
     position: relative;
     left: 300px;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     font-family: cursive;
-    top: 20px;
+    top: 40px;
+}
+
+#parent{
+    position: relative;
+    top: 80px;
+    left: 300px;
 }
 
 #salescity{
@@ -126,4 +132,7 @@ top: 300px;
     top: 10px;
 }
 
+table , th , td {
+    border: 2px solid purple;
+}
  

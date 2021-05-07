@@ -4,20 +4,26 @@
 }
 
 header {
-    background-color:#80F0D4;
+    background-color:#d4f1f9;
+    background-image:url(http://saulfein.github.io/cookie-stand/img/salmon.png);
+    background-repeat: no-repeat;
+    padding-top: 250px;
+    background-position: center;
 }
 
 h1{
-font-weight: bold;
-font-size: 80px;
-font-family: cursive;
-position: relative;
-left: 25px;
-top: 5px;
+    font-weight: bold;
+    font-size: 80px;
+    font-family: cursive;
+    position: relative;
+    left: 5px;
+    top: -248px;
 }
 
 header nav {
     padding-top: 30px;
+    position: relative;
+    bottom: 261px;
     
 }
 nav ul li  {
@@ -29,7 +35,7 @@ nav ul li  {
 
 nav ul li a {
     text-decoration: none;
-    color:#A38E4E;
+    color:#606D70;
     text-transform: uppercase;
     font-size: 30px;
     margin: 40px;
@@ -43,7 +49,7 @@ nav ul li a {
 #fh2{
     text-align: center;
     font-family: cursive;
-    color: #94a3df;
+    color: black;
     height: 23px;
 position: relative;
     font-size: 40px;
@@ -57,7 +63,7 @@ position: relative;
     bottom: 180px;
     text-align: center;
     font-family: cursive;
-    background-color: #E09BC3;
+    background-color: #9AAFB5;
     padding: 50px;
 }
 
@@ -67,7 +73,7 @@ position: relative;
     top: 80px;
     text-align: center;
     font-family: cursive;
-    background-color: #E0D26E;
+    background-color: #606D70;
     padding: 40px;
 }
 
@@ -94,7 +100,7 @@ bottom: 160px;
     text-align: center;
     font-family: cursive;
     top: 150px;
-    background-color: #E730F0;
+    background-color: #C5E1E8;
 
 }
 

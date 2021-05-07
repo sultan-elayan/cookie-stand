@@ -113,7 +113,7 @@ let dubai = new Branch('dubai', 11, 38, 3.7);
 let paris = new Branch('paris', 20, 38, 2.3);
 let lima = new Branch('lima', 2, 16, 4.6);
 
-console.log(Branchs);
+
 
 for (let i = 0; i < Branchs.length; i++) {
     Branchs[i].getcustomerPerHour();
@@ -183,57 +183,57 @@ function footer() {
     let footRow = document.createElement('tr');
     tabel.appendChild(footRow);
 
-    let footerTh = document.createElement('th');
-    footRow.appendChild(footerTh);
-    footerTh.textContent = ' totals';
+    let footerTd = document.createElement('td');
+    footRow.appendChild(footerTd);
+    footerTd.textContent = ' totals';
 
-
+    let tot = 0;
     for (let j = 0; j < hours.length; j++) {
         let totlPerHour = 0;
         for (let i = 0; i < Branchs.length; i++) {
             totlPerHour += Branchs[i].cookiesPerHour[j];
-
-
+            tot += Branchs[i].cookiesPerHour[j];
         }
 
-        let footthtotal = document.createElement('th');
-        footRow.appendChild(footthtotal);
-        footthtotal.textContent = totlPerHour;
-
-        //console.log(totlPerHour);
-
-
+        let footTdtotal = document.createElement('td');
+        footRow.appendChild(footTdtotal);
+        footTdtotal.textContent = totlPerHour;
     }
 
+    let totalOftotal = document.createElement('td');
+    footRow.appendChild(totalOftotal);
+    totalOftotal.textContent = tot;
 }
+
+
 
 footer();
 
 
-let branchForm = document.getElementById('form');
-branchForm.addEventListener('submit', submitter);
+// let branchForm = document.getElementById('form');
+// branchForm.addEventListener('submit', submitter);
 
 
-function submitter(event) {
-    event.preventDefault();
+// function submitter(event) {
+//     event.preventDefault();
 
-    let name = event.target.nameField.value;
-    console.log(name);
+//     let name = event.target.nameField.value;
+//     console.log(name);
 
-    let addedBranch = new Branch(name, minHourlyCustomers, maxHourlyCustomers, avgCookiesPerCustomer);
+//     let addedBranch = new Branch(name, minHourlyCustomers, maxHourlyCustomers, avgCookiesPerCustomer);
 
-    addedBranch.getcustomerPerHour();
-    addedBranch.getcookiesPerHour();
-    addedBranch.render();
+//     addedBranch.getcustomerPerHour();
+//     addedBranch.getcookiesPerHour();
+//     addedBranch.render();
 
-    let container = document.getElementById('BranchProfiles');
-    container.textContent = '';
-    for (let i = 0; i < cats.length; i++) {
+//     let container = document.getElementById('BranchProfiles');
+//     container.textContent = '';
+//     for (let i = 0; i < cats.length; i++) {
 
-        Branchs[i].getcustomerPerHour();
-        Branchs[i].getcookiesPerHour();
-        Branchs[i].avgCookiesPerCustomer();
+//         Branchs[i].getcustomerPerHour();
+//         Branchs[i].getcookiesPerHour();
+//         Branchs[i].avgCookiesPerCustomer();
 
-}
-}
+// }
+// }
 //submitter();

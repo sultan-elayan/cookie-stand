@@ -2,35 +2,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Lobster&family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Lobster&family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 * {
     box-sizing: border-box;
 }
 
 header {
-    background-color:#d4f1f9;
-    background-image:url(http://saulfein.github.io/cookie-stand/img/salmon.png);
+    background-image:url(https://images8.alphacoders.com/903/thumb-1920-903178.jpg);
     background-repeat: no-repeat;
     padding-top: 250px;
     background-position: center;
+    position: relative;
+height: 300px;
+box-sizing: initial;
 }
+
 
 h1{
     font-weight: bold;
     font-size: 80px;
     font-family: 'Fascinate', cursive;
-    position: relative;
-    left: 5px;
-    top: -248px;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    background-color: #ffffff9c;
 }
 
-h2{
- 
-font-family: 'Monoton', cursive;
-}
 header nav {
-    padding-top: 30px;
-    position: relative;
-    bottom: 261px;
+    position: absolute;
+    top: 105px;
+    left: 55px;
+    
     
 }
 nav ul li  {
@@ -42,49 +44,78 @@ nav ul li  {
 
 nav ul li a {
     text-decoration: none;
-    color:#606D70;
+    color:#ffffff;
+    background-color: #e5af83ab;
     text-transform: uppercase;
     font-size: 30px;
     margin: 40px;
     bottom: 70px;
-    position: relative;
-font-family:'Trebuchet MS';
+    font-family:'Trebuchet MS';
     right: 10px;
     will-change: auto;
+    padding: 7px;
+}
+nav ul li a:hover {
+    color: black;
+
+}
+
+article{
+    position: relative;
+}
+h2{
+ 
+font-family: 'Monoton', cursive;
+
 }
 
 #fh2{
     text-align: center;
-    color: black;
-    height: 23px;
-position: relative;
-    font-size: 40px;
-    left: 300px;
-  
+    height: 50px;
+    font-size: 45px;
 }
 
 .sh2{
     font-size: 40px;
-    position: relative;
     bottom: 180px;
     text-align: center;
-    background-color: #9AAFB5;
+    background-color: #92696a;
     padding: 50px;
+    border-radius: 100px;
+    border: solid 2px #e5af83;
 }
 
+#Location1{
+    font-size: 40px;
+    bottom: 180px;
+    text-align: center;
+    background-color: #92696a;
+    padding: 50px;
+    border-radius: 100px;
+    border: solid 2px #e5af83;
+    font-family: 'Bungee Inline', cursive;
+}
+.p{
+    text-align: center;
+}
 #sh3{
     font-size: 40px;
-    position: relative;
     top: 80px;
     text-align: center;
-    font-family: cursive;
-    background-color: #606D70;
     padding: 40px;
+    background-color: #92696a;
+    padding: 50px;
+    border-radius: 100px;
+    border: solid 2px #e5af83;
+    line-height: 2;
+}
+
+h3{
+    font-family: 'Bungee Inline', cursive;
 }
 
 #sh4{
     font-size: 40px;
-    position: relative;
     bottom: 180px;
     text-align: center;
     font-family: cursive;
@@ -95,36 +126,37 @@ main p{
     font-size: 25px;
     text-align: justify;
     line-height: 1.5;
-    position: relative;
 bottom: 160px;
 }
 
 #store{
     font-size: 40px;
-    position: relative;
     text-align: center;
-    font-family: cursive;
-    top: 150px;
-    background-color: #C5E1E8;
+    font-family: 'Bungee Inline', cursive;
+    background-color: #92696a;
+    padding: 50px;
+    border-radius: 100px;
+    border: solid 2px #e5af83;
+    position: relative;
+    
 
 }
 
 .last { 
-text-align: center;
-background-color:  #B5EAD7;
-position: relative;
-top: 300px;
+    text-align: center;
+    background-color: #3e3737;
+    color: wheat;
+    position: relative;
 }
 
 #ourstory{
 
-    position: relative;
     top: 200px;
 }
 
 #salesh2{
     text-align: center;
-    position: relative;
+    
     left: 300px;
     font-size: 40px;
     font-weight: bold;
@@ -132,28 +164,98 @@ top: 300px;
     top: 40px;
 }
 
-#parent{
-    position: relative;
-    top: 80px;
-    left: 300px;
-}
 
 #salescity{
-    position: relative;
+    
     top: 10px;
+}
+
+
+footer{
+    height: 100px;
+}
+
+#div1{
+    padding: 25px;
+}
+#ph1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ph2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ph3{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ph4{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ph5{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ph6{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#social{
+    position: absolute;
+    bottom: 26px;
+    right: 55px;
+}
+
+#copy{
+    position: absolute;
+    left: 450px;
+    bottom: 13px;
+    font-size: larger;
+}
+
+/* ///////////////////////////////////////////////////// */
+
+div2{
+    position: relative;
+}
+
+#parent{
+    
+    position: absolute;
+    left: 290px;
+}
+
+#form{
+    position: absolute;
+    font-size: 30px;
+    top: 770px;
+    left: 293px;
+    font-family: cursive;
+}
+
+#last2{
+    text-align: center;
+    background-color: #3e3737;
+    color: wheat;
+    position: relative;
+    top: 400px;
 }
 
 table , th , td {
     border: 2px solid purple;
+    
 }
-
-#form{
-    position: relative;
-    top: 100px;
-    left: 500px;
-    font-size: 30px;
-}
-footer{
-    height: 150px;
-}
- 

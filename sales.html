@@ -31,23 +31,23 @@
 
 
     <div>
-        <form id="event">
+        <form id="form">
             <fieldset>
                 <legend>Add New Info For Branch</legend>
                 <br>
-                <label for="shopLocation">Branch Location: </label>
-                <input type="text" name="shopLocation">
+                <label for="BranchLocation">Branch Location: </label>
+                <input type="text" name="BranchLocation" required>
                 <br>
                 <label for="minCust">Minimum Customers per Hour: </label>
-                <input type="number" name="minCust">
+                <input type="number" name="minCust" required>
                 <br>
                 <label for="maxCust">Maximum Customers per Hour: </label>
-                <input type="number" name="maxCust">
+                <input type="number" name="maxCust" required>
                 <br>
-                <label for="cookiesPerSale">Cookies per Sale</label>
-                <input type="number" name="cookiesPerSale" step="0.1">
+                <label for="cookiesPerCustomer">Cookies per Customer</label>
+                <input type="number" name="cookiesPerCustomer" step="0.1" required>
                 <br>
-                <button>Add a Branch</button>
+                <input type="submit" value="Click TO Submit">
             </fieldset>
         </form>
     </div>

@@ -1,4 +1,7 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Lobster&family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Lobster&family=Monoton&display=swap');
 * {
     box-sizing: border-box;
 }
@@ -14,12 +17,16 @@ header {
 h1{
     font-weight: bold;
     font-size: 80px;
-    font-family: cursive;
+    font-family: 'Fascinate', cursive;
     position: relative;
     left: 5px;
     top: -248px;
 }
 
+h2{
+ 
+font-family: 'Monoton', cursive;
+}
 header nav {
     padding-top: 30px;
     position: relative;
@@ -41,14 +48,13 @@ nav ul li a {
     margin: 40px;
     bottom: 70px;
     position: relative;
-    font-family: cursive;
+font-family:'Trebuchet MS';
     right: 10px;
     will-change: auto;
 }
 
 #fh2{
     text-align: center;
-    font-family: cursive;
     color: black;
     height: 23px;
 position: relative;
@@ -62,7 +68,6 @@ position: relative;
     position: relative;
     bottom: 180px;
     text-align: center;
-    font-family: cursive;
     background-color: #9AAFB5;
     padding: 50px;
 }
@@ -94,7 +99,7 @@ main p{
 bottom: 160px;
 }
 
-#th2{
+#store{
     font-size: 40px;
     position: relative;
     text-align: center;
@@ -142,10 +147,13 @@ table , th , td {
     border: 2px solid purple;
 }
 
-#event{
+#form{
     position: relative;
     top: 100px;
     left: 500px;
     font-size: 30px;
+}
+footer{
+    height: 150px;
 }
  

@@ -71,6 +71,7 @@
 
 let Branchs = [];
 let hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12AM', '1PM', '2PM', '3PM', '4PM', '5PM', '5PM', '6PM', '7PM'];
+let totalPerBranch = [];
 
 function randomNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -84,9 +85,9 @@ function Branch(name, minHourlyCustomers, maxHourlyCustomers, avgCookiesPerCusto
     this.maxHourlyCustomers = maxHourlyCustomers;
     this.avgCookiesPerCustomer = avgCookiesPerCustomer;
     this.customerPerHour = [];
+    this.totalPerBranch = []
     this.cookiesPerHour = [];
     this.total = 0;
-
     Branchs.push(this);
 }
 // define the functions
@@ -101,12 +102,12 @@ Branch.prototype.getcookiesPerHour = function () {
     for (let i = 0; i < hours.length; i++) {
         this.cookiesPerHour.push(Math.floor(this.avgCookiesPerCustomer * this.customerPerHour[i]));
         this.total += this.cookiesPerHour[i];
-
-
-    }
+ }
+console.log(this.total);
 }
 
 
+//console.log(totalPerBranch);
 let seattle = new Branch('seattle', 23, 65, 6.3);
 let tokyo = new Branch('tokyo', 3, 24, 1.2);
 let dubai = new Branch('dubai', 11, 38, 3.7);
@@ -117,7 +118,7 @@ let lima = new Branch('lima', 2, 16, 4.6);
 
 for (let i = 0; i < Branchs.length; i++) {
     Branchs[i].getcustomerPerHour();
-    Branchs[i].getcookiesPerHour();
+Branchs[i].getcookiesPerHour();
 
 }
 
@@ -168,10 +169,12 @@ Branch.prototype.render = function () {
     let totalPerBranch = document.createElement('td')
     dRow.appendChild(totalPerBranch);
     totalPerBranch.textContent = this.total;
+    //console.log(totalPerBranch);
 }
 
+
 for (let i = 0; i < Branchs.length; i++) {
-    Branchs[i].getcookiesPerHour();
+   
     Branchs[i].getcustomerPerHour();
     Branchs[i].render();
 
@@ -183,57 +186,81 @@ function footer() {
     let footRow = document.createElement('tr');
     tabel.appendChild(footRow);
 
-    let footerTd = document.createElement('td');
+    let footerTd = document.createElement('th');
     footRow.appendChild(footerTd);
     footerTd.textContent = ' totals';
+
 
     let tot = 0;
     for (let j = 0; j < hours.length; j++) {
         let totlPerHour = 0;
+        
         for (let i = 0; i < Branchs.length; i++) {
             totlPerHour += Branchs[i].cookiesPerHour[j];
-            tot += Branchs[i].cookiesPerHour[j];
+            
+
         }
 
-        let footTdtotal = document.createElement('td');
+        let footTdtotal = document.createElement('th');
         footRow.appendChild(footTdtotal);
         footTdtotal.textContent = totlPerHour;
+       // console.log(totlPerHour);
+        tot += totlPerHour;
     }
+    
+    //console.log(tot);
 
-    let totalOftotal = document.createElement('td');
+
+    let totalOftotal = document.createElement('th');
     footRow.appendChild(totalOftotal);
     totalOftotal.textContent = tot;
 }
 
 
 
+
 footer();
 
 
-// let branchForm = document.getElementById('form');
-// branchForm.addEventListener('submit', submitter);
+ let branchForm = document.getElementById('form');
+ branchForm.addEventListener('submit', submitter);
 
 
-// function submitter(event) {
-//     event.preventDefault();
+function submitter(event) {
+    event.preventDefault();
 
-//     let name = event.target.nameField.value;
-//     console.log(name);
+    let name = event.target.BranchLocation.value;
+    console.log('name' + name);
+    
+    let minCust = event.target.minCust.value;
+    console.log('name' + minCust);
+    
+    let maxCust = event.target.maxCust.value;
+    console.log('name' + maxCust);
+    
+    let cookiesPerCustomer = event.target.cookiesPerCustomer.value;
+    console.log('name' + cookiesPerCustomer);
+    
 
-//     let addedBranch = new Branch(name, minHourlyCustomers, maxHourlyCustomers, avgCookiesPerCustomer);
+    let addedBranch = new Branch(name, minCust, maxCust, cookiesPerCustomer);
 
 //     addedBranch.getcustomerPerHour();
 //     addedBranch.getcookiesPerHour();
 //     addedBranch.render();
+// console.log(Branchs);
+//     //let container = document.getElementById('BranchProfiles');
+    tabel.textContent = '';
 
-//     let container = document.getElementById('BranchProfiles');
-//     container.textContent = '';
-//     for (let i = 0; i < cats.length; i++) {
+    makeHeader();
+    
+    for (let i = 0; i < Branchs.length; i++) {
 
-//         Branchs[i].getcustomerPerHour();
-//         Branchs[i].getcookiesPerHour();
-//         Branchs[i].avgCookiesPerCustomer();
+        Branchs[i].getcustomerPerHour();
+        Branchs[i].getcookiesPerHour();
+        Branchs[i].render();
+        //Branchs[i].avgCookiesPerCustomer();
+        
+    }
+    footer();
+}
 
-// }
-// }
-//submitter();

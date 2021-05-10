@@ -250,7 +250,7 @@ function submitter(event) {
     console.log(Branchs);
     //let container = document.getElementById('BranchProfiles');
     tabel.textContent = '';
-
+    branchForm.reset();
     makeHeader();
 
     for (let i = 0; i < Branchs.length; i++) {
@@ -262,5 +262,7 @@ function submitter(event) {
 
     }
     footer();
+
+    
 }
 

@@ -155,13 +155,11 @@ bottom: 160px;
 }
 
 #salesh2{
-    text-align: center;
-    
+    text-align: center; 
     left: 300px;
     font-size: 40px;
     font-weight: bold;
     font-family: cursive;
-    top: 40px;
 }
 
 
@@ -229,20 +227,17 @@ footer{
 
 /* ///////////////////////////////////////////////////// */
 
-div2{
-    position: relative;
-}
-
 #parent{
     
     position: absolute;
     left: 290px;
+    top: 600px;
 }
 
 #form{
     position: absolute;
     font-size: 30px;
-    top: 770px;
+    top: 815px;
     left: 293px;
     font-family: cursive;
 }
